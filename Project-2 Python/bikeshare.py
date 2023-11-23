@@ -20,7 +20,6 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city_name = ''
     while city_name.lower() not in CITY_DATA:
         city_name = input("\nWhat is the name of the city to analyze data? (E.g. Input either chicago, new york city, washington)\n")
@@ -31,7 +30,6 @@ def get_filters():
             #We were not able to get the name of the city to analyze data so we continue the loop.
             print("Sorry we were not able to get the name of the city to analyze data, Please input either chicago, new york city or washington.\n")
 
-    # TO DO: get user input for month (all, january, february, ... , june)
     month_name = ''
     while month_name.lower() not in MONTH_DATA:
         month_name = input("\nWhat is the name of the month to filter data? (E.g. Input either 'all' to apply no month filter or january, february, ... , june)\n")
@@ -42,7 +40,6 @@ def get_filters():
             #We were not able to get the name of the month to analyze data so we continue the loop.
             print("Sorry we were not able to get the name of the month to filter data, Please input either 'all' to apply no month filter or january, february, ... , june.\n")
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day_name = ''
     while day_name.lower() not in DAY_DATA:
         day_name = input("\nWhat is the name of the day to filter data? (E.g. Input either 'all' to apply no day filter or monday, tuesday, ... sunday)\n")
@@ -106,15 +103,12 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
     common_month = df['month'].mode()[0]
     print("The most common month from the given fitered data is: " + MONTH_DATA[common_month].title())
 
-    # TO DO: display the most common day of week
     common_day_of_week = df['day_of_week'].mode()[0]
     print("The most common day of week from the given fitered data is: " + common_day_of_week)
 
-    # TO DO: display the most common start hour
     common_start_hour = df['hour'].mode()[0]
     print("The most common start hour from the given fitered data is: " + str(common_start_hour))
 
@@ -136,11 +130,9 @@ def station_stats(df):
     common_start_station = df['Start Station'].mode()[0]
     print("The most commonly used start station from the given fitered data is: " + common_start_station)
 
-    # TO DO: display most commonly used end station
     common_end_station = df['End Station'].mode()[0]
     print("The most commonly used end station from the given fitered data is: " + common_end_station)
 
-    # TO DO: display most frequent combination of start station and end station trip
     frequent_combination = (df['Start Station'] + "||" + df['End Station']).mode()[0]
     print("The most frequent combination of start station and end station trip is : " + str(frequent_combination.split("||")))
 
