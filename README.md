@@ -4,7 +4,7 @@
 Include the date you created this project and README file.
 
 ### Project Title
-Post your work on Github
+Post your work on Github!
 
 ### Description
 This is my github project!
