@@ -7,7 +7,7 @@ Include the date you created this project and README file.
 Post your work on Github
 
 ### Description
-Describe what your project is about and what it does
+This is my github project
 
 ### Files used
 Include the files used
