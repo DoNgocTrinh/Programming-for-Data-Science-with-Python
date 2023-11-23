@@ -6,9 +6,9 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-MONTH_DATA = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
-
 DAY_DATA = ['all', 'monday', 'tuesday', 'wednesday', 'friday', 'saturday', 'sunday']
+
+MONTH_DATA = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 
 def get_filters():
     """
@@ -75,7 +75,6 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
-
 
     # filter by month if applicable
     if month != 'all':
