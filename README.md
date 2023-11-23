@@ -8,7 +8,7 @@ Include the date you created this project and README file.
 Post your Work on Github.
 
 ### Description
-This is my github repository
+This is my github repository.
 
 ### Files used
 chicago.csv
